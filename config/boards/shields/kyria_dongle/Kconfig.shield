@@ -1,0 +1,17 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_KYRIA_DONGLE
+    bool
+
+config SHIELD_KYRIA_DONGLE_CENTRAL
+    def_bool $(shields_list_contains,kyria_dongle_central)
+	select SHIELD_KYRIA_DONGLE
+
+config SHIELD_KYRIA_DONGLE_LEFT
+	def_bool $(shields_list_contains,kyria_dongle_left)
+	select SHIELD_KYRIA_DONGLE
+
+config SHIELD_KYRIA_DONGLE_RIGHT
+	def_bool $(shields_list_contains,kyria_dongle_right)
+	select SHIELD_KYRIA_DONGLE
