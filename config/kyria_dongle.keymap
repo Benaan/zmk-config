@@ -28,26 +28,15 @@
 
 
 / {
-    behaviors {
-    gqt: global-quick-tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "GLOBAL_QUICK_TAP";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
-    };
+
 	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
 			bindings = <
-                &none    &gqt &kp ESC &kp Q       &kp W       &kp F       &kp P                  &kp B                                                          &kp J       &kp L       &kp U           &kp Y           &kp APOS        &none
+                &none    &mt &kp ESC &kp Q       &kp W       &kp F       &kp P                  &kp B                                                          &kp J       &kp L       &kp U           &kp Y           &kp APOS        &none
                 &none    &kp A                    &kp R       &kp S       &kp T                  &kp G                                                          &kp M       &kp N       &kp E           &kp I           &kp O           &none
                 &none    &kp Z                    &kp X       &kp C       &kp D                  &kp V      &none      &none      &none          &none          &kp K       &kp H       &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                              &none       &gqt &none &to NAV     &kp SPACE  &sk LSHIFT &none      &none          &kp RETURN     &kp BSPC    &kp TAB     &none 
+                                                              &none       &mt &none &to NAV     &kp SPACE  &sk LSHIFT &none      &none          &kp RETURN     &kp BSPC    &kp TAB     &none 
 			>;
 		};
         navigation_layer {
