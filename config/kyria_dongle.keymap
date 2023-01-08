@@ -34,9 +34,7 @@ gqt: global-quick-tap {
     };
 };
 
-&sk {
-    quick-release;
-};
+
 
 
 / {
