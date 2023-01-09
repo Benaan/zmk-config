@@ -2,11 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Benaan
-      url-base: https://github.com/Benaan
+    - name: slicemk 
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
-      remote: Benaan
+      remote: slicemk
       revision: main
       import: app/west.yml
   self:
