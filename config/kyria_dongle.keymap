@@ -11,11 +11,6 @@
 #define NAV    1
 #define NUM    2
 
-&mt {
-    tapping-term-ms = <200>;
-    #binding-cells = <2>;
-};
-
 / {
     macros {
         fnArrow: fnArrow {
@@ -27,43 +22,57 @@
     };
 };
 
-
-
-
-
-
 / {
-
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
 			bindings = <
-                &none    &mt &kp ESC &kp Q       &kp W       &kp F       &kp P                  &kp B                                                          &kp J       &kp L       &kp U           &kp Y           &kp APOS        &none
-                &none    &kp A                    &kp R       &kp S       &kp T                  &kp G                                                          &kp M       &kp N       &kp E           &kp I           &kp O           &none
-                &none    &kp Z                    &kp X       &kp C       &kp D                  &kp V      &none      &none      &none          &none          &kp K       &kp H       &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                              &none       &mt &none &to NAV     &kp SPACE  &sk LSHIFT &none      &none          &kp RETURN     &kp BSPC    &kp TAB     &none 
-			>;
-		};
-        navigation_layer {
-			bindings = <
-                &trans      &sk LALT    &kp HOME    &kp UP      &kp END                 &kp PG_UP                                               &none       &none       &none           &none           &kp GRAVE       &trans
-                &trans      &sk LCTRL   &kp LEFT    &kp DOWN    &kp RIGHT               &kp PG_DN                                               &none       &fnArrow    &none           &none           &none           &trans
-                &trans      &sk LWIN    &kp LBKT    &kp RBKT    &kp SEMI                &kp BSLH  &trans     &trans      &trans       &trans    &kp INS     &none       &none           &none           &none           &trans
-                                                    &trans      &mt &to DEF &to NUM     &to DEF   &trans     &trans      &trans       &trans    &trans      &none       &none
+                &none    &kp Q                   &kp W       &kp F       &kp P                  &kp B                                                        &kp J       &kp L       &kp U           &kp Y           &kp APOS        &none
+                &none    &kp A                   &kp R       &kp S       &kp T                  &kp G                                                        &kp M       &kp N       &kp E           &kp I           &kp O           &none
+                &none    &kp Z                   &kp X       &kp C       &kp D                  &kp V    &none      &none      &none          &none          &kp K       &kp H       &kp COMMA       &kp DOT         &kp FSLH        &none
+                                                             &none       &none                  &to 1    &hm LSHIFT SPACE &hm LCTRL RETURN  &hm LALT TAB        &kp RETURN     &kp BSPC    &none       &none
 			>;
 		};
         number_layer {
 			bindings = <
-                &trans      &sk LALT    &kp N7      &kp N8      &kp N9                  &kp MINUS                                               &trans      &kp F7      &kp F8          &kp F9          &kp F12         &trans
-                &trans      &sk LCTRL   &kp N4      &kp N5      &kp N6                  &kp N0                                                  &trans      &kp F4      &kp F5          &kp F6          &kp F11         &trans
-                &trans      &sk LWIN    &kp N1      &kp N2      &kp N3                  &kp EQUAL &trans     &trans      &trans       &trans    &trans      &kp F1      &kp F2          &kp F3          &kp F10         &trans
-                                                    &trans      &to DEF                 &to DEF   &trans     &trans      &trans       &trans    &trans      &none       &none
+                &trans      &kp LBKT   &kp N7      &kp N8      &kp N9                  &kp BSLH                                                &trans      &trans       &trans           &trans           &trans           &trans
+                &trans      &kp N0     &kp N4      &kp N5      &kp N6                  &kp SEMI                                                &trans      &sk LSHFT    &sk LCTRL        &sk LALT         &sk LWIN         &trans
+                &trans      &kp RBKT   &kp N1      &kp N2      &kp N3                  &kp EQUAL &trans     &trans      &trans       &trans    &trans      &trans       &trans           &trans           &trans           &trans
+                                                   &trans      &trans                  &to 2     &trans     &to 0       &trans       &trans    &trans      &trans       &trans 
+			>; 
+		};
+        navigation_layer {
+			bindings = <
+                &trans      &kp TILDE   &kp HOME    &kp UP      &kp END                 &kp PG_UP                                               &trans      &trans       &trans           &trans           &trans           &trans
+                &trans      &kp MINUS   &kp LEFT    &kp DOWN    &kp RIGHT               &kp PG_DN                                               &trans      &sk LSHFT    &sk LCTRL        &sk LALT         &sk LWIN         &trans
+                &trans      &kp INS     &kp BSPC    &kp DEL     &kp RETURN              &fnArrow  &trans     &trans      &trans       &trans    &trans      &trans       &trans           &trans           &trans           &trans
+                                                    &trans      &trans                  &to 3     &trans     &to 0       &trans       &trans    &trans      &trans       &trans         
+			>;
+		};
+
+        function_layer {
+			bindings = <
+                &trans      &kp F12     &kp F7      &kp F8      &kp F9                &trans                                                  &trans      &trans       &trans           &trans           &trans           &trans
+                &trans      &kp F11     &kp F4      &kp F5      &kp F6                &trans                                                  &trans      &sk LSHFT    &sk LCTRL        &sk LALT         &sk LWIN         &trans
+                &trans      &kp F10     &kp F1      &kp F2      &kp F3                &trans    &trans     &trans      &trans       &trans    &trans      &trans       &trans           &trans           &trans           &trans
+                                                    &trans      &trans                &to 0     &trans     &to 0       &trans       &trans    &trans      &none        &none
 			>;
 		};
 	};
 };
 
-
+//&fnArrow
 //	&trans      &trans      &trans      &trans      &trans      &trans                                            &trans      &trans      &trans      &trans          &trans        &trans
 //	&trans      &trans      &trans      &trans      &trans      &trans                                            &trans      &trans      &trans      &trans          &trans        &trans
 //	&trans      &trans      &trans      &trans      &trans      &trans    &trans    &trans       &trans&trans     &trans      &trans      &trans      &trans          &trans        &trans
