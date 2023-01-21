@@ -30,34 +30,52 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
+        };  
+        hlm: homerow_layer_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYER_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&to>;
         };
+
     };
 	keymap {
 		compatible = "zmk,keymap";
 		default_layer {
 			bindings = <
-                &none    &kp Q        &kp W       &kp F       &kp P        &kp B                                                                         &kp J       &kp L       &kp U           &kp Y           &kp APOS        &none
-                &none    &kp A        &kp R       &kp S       &kp T        &kp G                                                                         &kp M       &kp N       &kp E           &kp I           &kp O           &none
-                &none    &kp Z        &kp X       &kp C       &kp D        &kp V    &none           &none              &none            &none            &kp K       &kp H       &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                  &none       &none        &to 1    &hm LSHIFT SPACE &hm LCTRL RETURN  &hm LALT TAB     &hm LGUI DEL     &kp BSPC    &none       &none
+                &none    &kp Q        &kp W       &kp F       &kp P        &kp B                                                                                    &kp J            &kp L         &kp U           &kp Y           &kp APOS        &none
+                &none    &kp A        &kp R       &kp S       &kp T        &kp G                                                                                    &kp M            &kp N         &kp E           &kp I           &kp O           &none
+                &none    &kp Z        &kp X       &kp C       &kp D        &kp V              &none            &none           &none             &none              &kp K            &kp H         &kp COMMA       &kp DOT         &kp FSLH        &none
+                                                  &none       &hlm 0 1     &hm LSHIFT SPACE   &hm LCTRL RETURN &none           &none             &hm LALT TAB       &kp BSPC         &hm LGUI DEL  &none
 			>;
+		};     
+        symbol_layer {
+			bindings = <
+                &trans      &kp ESC       &kp EXCL      &kp LBRC     &kp RBRC      &kp DEL                                                 &kp TILDE   &kp DLLR    &kp CARET      &kp GRAVE       &trans         &trans
+                &trans      &kp SEMI      &kp EQUAL     &kp LPAR     &kp RPAR      &kp PIPE                                                &kp AT      &kp UNDER   &kp ASTRK      &kp MINUS       &kp PLUS       &trans
+                &trans      &kp COLON     &kp AMPS      &kp LBKT     &kp RBKT      &kp BSPC      &trans    &trans       &trans  &trans     &trans      &fnArrow    &kp HASH       &trans          &kp BSLH       &trans
+                                                        &trans       &hlm 0 2      &trans        &trans    &trans       &trans  &trans     &trans      &trans      &trans
+        >;
 		};
         number_layer {
 			bindings = <
-                &trans      &kp LBKT   &kp N7      &kp N8      &kp N9                  &kp BSLH                                                &trans      &kp F7      &kp F8      &kp F9    &kp F12    &trans
-                &trans      &kp N0     &kp N4      &kp N5      &kp N6                  &kp SEMI                                                &kp ESC     &kp F4      &kp F5      &kp F6    &kp F11    &trans
-                &trans      &kp RBKT   &kp N1      &kp N2      &kp N3                  &kp EQUAL &trans     &trans      &trans       &trans    &trans      &kp F1      &kp F2      &kp F3    &kp F10    &trans
-                                                   &trans      &trans                  &to 2     &trans     &trans      &trans       &trans    &trans      &trans      &trans 
+                &trans      &trans     &kp N7      &kp N8      &kp N9                  &trans                                                      &trans      &kp F7      &kp F8      &kp F9    &kp F12    &trans
+                &trans      &kp N0     &kp N4      &kp N5      &kp N6                  &trans                                                      &kp ESC     &kp F4      &kp F5      &kp F6    &kp F11    &trans
+                &trans      &trans     &kp N1      &kp N2      &kp N3                  &trans        &trans     &trans      &trans       &trans    &trans      &kp F1      &kp F2      &kp F3    &kp F10    &trans
+                                                   &trans      &hlm 0 3                &trans        &trans     &trans      &trans       &trans    &trans      &trans      &trans 
 			>; 
 		};
         navigation_layer {
-			bindings = <
-                &trans      &kp TILDE   &kp HOME    &kp UP      &kp END                 &kp PG_UP                                               &trans      &trans       &trans           &trans           &bootloader      &trans
-                &trans      &kp MINUS   &kp LEFT    &kp DOWN    &kp RIGHT               &kp PG_DN                                               &trans      &sk LSHFT    &sk LCTRL        &sk LALT         &sk LWIN         &trans
-                &trans      &kp INS     &kp BSPC    &kp DEL     &kp RETURN              &fnArrow  &trans     &trans      &trans       &trans    &trans      &trans       &trans           &trans           &trans           &trans
-                                                    &trans      &trans                  &to 0     &trans     &trans      &trans       &trans    &trans      &trans       &trans         
+			bindings = < 
+                &trans      &trans     &kp HOME    &kp UP      &kp END                 &kp PG_UP                                               &trans      &trans       &trans           &trans           &bootloader      &trans
+                &trans      &kp INS    &kp LEFT    &kp DOWN    &kp RIGHT               &kp PG_DN                                               &trans      &trans       &trans           &trans           &trans           &trans
+                &trans      &trans     &kp BSPC    &kp DEL     &kp RETURN              &trans    &trans     &trans      &trans       &trans    &trans      &trans       &trans           &trans           &trans           &trans
+                                                   &trans      &hlm 0 0                &trans    &trans     &trans      &trans       &trans    &trans      &trans       &trans         
 			>;
 		};
 	};
