@@ -49,6 +49,29 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         }; 
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(C)>, <&kp LC(X)>;
+        };
+        mr: mod_tap_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod_tap_repeat";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp LCTRL>, <&key_repeat>;
+        }; 
     };
 	keymap {
 		compatible = "zmk,keymap";
@@ -57,14 +80,14 @@
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none            &none  &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                        &none           &none           &mk LSHFT SPACE &ml 1 RETURN &none  &none     &mk TAB LCTRL &ml 2 BSPC      &none           &none
+                                                        &none           &none           &mk LSHFT SPACE &ml 1 RETURN &none  &none       &mr         &ml 2 BSPC      &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
-                &trans  &kp ESC         &kp BSPC        &kp LC(F)       &caps_word      &kp INS                                                     &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       &trans
+                &trans  &kp ESC         &kp TAB         &kp LC(F)       &caps_word      &kp INS                                                     &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       &trans
                 &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp PRCNT       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-                &trans  &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)       &kp LC(Y)   &trans      &trans      &trans      &trans      &kp DLLR        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                &trans  &kp LC(Z)       &td1            &kp LC(V)       &kp BSPC        &kp DEL     &trans      &trans      &trans      &trans      &kp DLLR        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
                                                         &trans          &trans          &trans      &trans      &trans      &trans      &trans      &kp DEL         &trans          &trans      
             >;
 		};
