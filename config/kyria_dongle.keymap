@@ -22,7 +22,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <42 47>;
+            key-positions = <43 46>;
             bindings = <&mo 3>;
         };
     };
@@ -57,7 +57,7 @@
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none            &none  &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                        &none           &none           &ml 1 SPACE &mk LSHFT RETURN &none  &none     &mk LCTRL TAB &ml 2 BSPC      &none           &none
+                                                        &none           &none           &mk LSHFT SPACE  &ml 1RETURN &none  &none       &ml 2 TAB   &kp BSPC        &none           &none
 			>;
 		};   
         layer_1 {
