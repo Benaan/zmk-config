@@ -79,8 +79,7 @@
 	};
 };
 
-//&fnArrow
-//	&trans  &trans          &trans          &trans          &trans          &trans                                                      &trans          &trans          &trans          &trans          &trans          &trans
-//	&trans  &trans          &trans          &trans          &trans          &trans                                                      &trans          &trans          &trans          &trans          &trans          &trans
-//	&trans  &trans          &trans          &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans          &trans          &trans          &trans
-//	                                        &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans
+//	            &trans  &trans          &trans          &trans          &trans          &trans                                                      &trans          &trans          &trans          &trans          &trans          &trans
+//	            &trans  &trans          &trans          &trans          &trans          &trans                                                      &trans          &trans          &trans          &trans          &trans          &trans
+//	            &trans  &trans          &trans          &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans          &trans          &trans          &trans
+//	                                                    &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans
