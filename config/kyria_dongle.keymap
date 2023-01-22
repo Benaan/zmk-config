@@ -31,44 +31,24 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        mk: mod_tap_key {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "mod_tap_key";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
-        };  
-        td_mta: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP";
-            #binding-cells = <0>;
+        }; 
+        ml: mod_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod_tap_layer";
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&lt 1 SPACE>, <&kp SPACE>;
-        };
-        td_mtb: tap_dance_mod_tap_b {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_B";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&hm LSHFT RETURN>, <&kp RETURN>;
-        };
-        td_mtc: tap_dance_mod_tap_c {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_C";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lt 2 TAB>, <&kp TAB>;
-        };
-        td_mtd: tap_dance_mod_tap_d {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_D";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&hm LCTRL BSPC>, <&kp BSPC>;
-        };
-
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+        }; 
     };
 	keymap {
 		compatible = "zmk,keymap";
@@ -76,8 +56,8 @@
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
-                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                        &none           &none           &td_mta     &td_mtb     &none       &none       &td_mtc     &td_mtd         &none           &none
+                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none            &none  &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
+                                                        &none           &none           &mt 1 SPACE &mt LSHFT RETURN &none  &none       &mt 2 TAB   &kp BSPC        &none           &none
 			>;
 		};   
         layer_1 {
