@@ -66,11 +66,11 @@
         mr: mod_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_tap_repeat";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
-            bindings = <&kp>, <&sk>;
+            bindings = <&kp>, <&key_repeat>;
         }; 
     };
 	keymap {
