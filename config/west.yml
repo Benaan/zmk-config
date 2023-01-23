@@ -1,11 +1,13 @@
 manifest:
   remotes:
-    - name: benvallack
-      url-base: https://github.com/benvallack
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: slicemk 
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
-      remote: benvallack
-      revision: repeatrollfix-tapdance-macro-mouse-dongle
+      remote: slicemk
+      revision: dongle-pr
       import: app/west.yml
   self:
     path: config
