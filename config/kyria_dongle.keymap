@@ -37,7 +37,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
         ml: mod_tap_layer {
@@ -46,7 +46,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         }; 
         td0: tap_dance_0 {
@@ -63,15 +63,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp LC(C)>, <&kp LC(X)>;
         };
-        mr: mod_tap_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mod_tap_repeat";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&key_repeat>;
-        }; 
     };
 	keymap {
 		compatible = "zmk,keymap";
