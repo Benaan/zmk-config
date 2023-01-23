@@ -66,11 +66,11 @@
         mr: mod_tap_repeat {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_tap_repeat";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
-            bindings = <&kp LCTRL>, <&sk LSHIFT>;
+            bindings = <&kp>, <&sk>;
         }; 
     };
 	keymap {
@@ -80,7 +80,7 @@
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none            &none  &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                        &none           &none           &mk LSHFT SPACE &ml 1 RETURN &none  &none       &mr         &ml 2 BSPC      &none           &none
+                                                        &none           &none           &mk LSHFT SPACE &ml 1 RETURN &none  &none       &none       &ml 2 BSPC      &none           &none
 			>;
 		};   
         layer_1 {
