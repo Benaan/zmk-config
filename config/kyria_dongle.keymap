@@ -35,27 +35,20 @@
             compatible = "zmk,behavior-hold-tap";
             label = "mod_tap_key";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
         }; 
         ml: mod_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_tap_layer";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+         flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         }; 
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
-        };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
