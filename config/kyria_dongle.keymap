@@ -22,7 +22,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <33 35>;
+            key-positions = <43 47>;
             bindings = <&mo 3>;
         };
     };
@@ -61,34 +61,34 @@
 		compatible = "zmk,keymap";
 		layer_0 {
 			bindings = <
-                &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        
-                &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O         
-                &kp Z           &kp X           &kp C           &kp D           &kp V                                                       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       
-                                                                                &mk LSHFT SPACE    &ml 1 RETURN          &key_repeat        &ml 2 BSPC      
+                &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
+                &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
+                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none            &none  &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
+                                                        &none           &none           &mk LSHFT SPACE &ml 1 RETURN &none  &none       &key_repeat &ml 2 BSPC      &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
-                &kp ESC         &kp TAB         &kp LC(F)       &caps_word      &kp INS                                                     &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       
-                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp PRCNT       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       
-                &kp LC(Z)       &td1            &kp LC(V)       &kp BSPC        &kp DEL                                                     &kp DLLR        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END       
-                                                                                            &trans      &trans      &trans      &kp DEL         
+                &trans  &kp ESC         &kp TAB         &kp LC(F)       &caps_word      &kp INS                                                     &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       &trans
+                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp PRCNT       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
+                &trans  &kp LC(Z)       &td1            &kp LC(V)       &kp BSPC        &kp DEL     &trans      &trans      &trans      &trans      &kp DLLR        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                                                        &trans          &trans          &trans      &trans      &trans      &trans      &trans      &kp DEL         &trans          &trans      
             >;
 		};
         layer_2 {
 			bindings = <
-                &kp UNDER       &kp COLON       &kp AMPS        &kp PIPE        &fnArrow                                                    &kp PLUS        &kp N7          &kp N8          &kp N9          &kp ASTRK       
-                &kp SEMI        &kp EXCL        &kp LBRC        &kp LPAR        &kp LBKT                                                    &kp MINUS       &kp N4          &kp N5          &kp N6          &kp EQUAL      
-                &kp HASH        &kp AT          &kp RBRC        &kp RPAR        &kp RBKT                                                    &kp N0          &kp N1          &kp N2          &kp N3          &kp BSLH       
-    	                                                                                     &trans      &trans      &trans      &trans         
+                &trans  &kp UNDER       &kp COLON       &kp AMPS        &kp PIPE        &fnArrow                                                    &kp PLUS        &kp N7          &kp N8          &kp N9          &kp ASTRK       &trans
+                &trans  &kp SEMI        &kp EXCL        &kp LBRC        &kp LPAR        &kp LBKT                                                    &kp MINUS       &kp N4          &kp N5          &kp N6          &kp EQUAL       &trans
+                &trans  &kp HASH        &kp AT          &kp RBRC        &kp RPAR        &kp RBKT    &trans      &trans      &trans      &trans      &kp N0          &kp N1          &kp N2          &kp N3          &kp BSLH        &trans
+    	                                                &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans 
             >;
 		};   
         layer_3 {
 			bindings = <
-                &bootloader     &trans          &trans          &kp PSCRN       &trans                                                      &kp F12          &kp F7         &kp F8          &kp F9          &kp LC(PLUS)    
-                &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp F11          &kp F4         &kp F5          &kp F6          &kp LC(MINUS)     
-                &trans          &trans          &trans          &kp K_APP       &trans                                                      &kp F10          &kp F1         &kp F2          &kp F3          &kp LC(N0)     
-                                                                                                &trans      &trans      &trans      &trans         
+                &trans  &bootloader     &trans          &trans          &kp PSCRN       &trans                                                      &kp F12          &kp F7         &kp F8          &kp F9          &kp LC(PLUS)       &trans
+                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp F11          &kp F4         &kp F5          &kp F6          &kp LC(MINUS)       &trans
+                &trans  &trans          &trans          &trans          &kp K_APP       &trans      &trans      &trans      &trans      &trans      &kp F10          &kp F1         &kp F2          &kp F3          &kp LC(N0)       &trans
+                                                        &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans
             >;
 		};  
 	};
