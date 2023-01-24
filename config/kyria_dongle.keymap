@@ -40,6 +40,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         }; 
+        mkp: mod_tap_keyp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "mod_tap_keyp";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        }; 
         ml: mod_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "mod_tap_layer";
@@ -62,7 +71,7 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &mk LGUI A      &mk LALT R      &mk LCTRL S     &mk LG(LS(LA(LCTRL))) T     &kp G                                           &kp M  &mk LG(LS(LA(LCTRL))) N  &mk LCTRL E     &mk LALT I      &mk LGUI O      &none
+                &none   &mkp LGUI A     &mk LALT R      &mk LCTRL S     &mk LG(LS(LA(LCTRL))) T     &kp G                                           &kp M  &mk LG(LS(LA(LCTRL))) N  &mk LCTRL E     &mk LALT I      &mkp LGUI O     &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V        &none            &none  &none       &none      &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
                                                         &none           &none           &ml 1 SPACE &kp LSHFT &none  &none       &key_repeat &ml 2 BSPC      &none           &none
 			>;
