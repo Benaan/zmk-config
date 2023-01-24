@@ -22,42 +22,14 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <42 47>;
+            key-positions = <43 46>;
             bindings = <&mo 3>;
         };
     };
 };
 
-
 / {
     behaviors {
-        mk: mod_tap_key {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mod_tap_key";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        }; 
-        mkp: mod_tap_keyp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mod_tap_keyp";
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        }; 
-        ml: mod_tap_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mod_tap_layer";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        }; 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
@@ -71,15 +43,15 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &mkp LGUI A     &mk LALT R      &mk LCTRL S     &mk LG(LS(LA(LCTRL))) T     &kp G                                           &kp M  &mk LG(LS(LA(LCTRL))) N  &mk LCTRL E     &mk LALT I      &mkp LGUI O     &none
+                &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V        &none            &none  &none       &none      &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
-                                                        &none           &none           &ml 1 SPACE &kp LSHFT &none  &none       &key_repeat &ml 2 BSPC      &none           &none
+                                                        &none           &none           &kp LSHFT    &mo 1            &none  &none       &mo 2      &kp SPACE       &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
-                &trans  &kp ESC         &trans          &kp LC(F)       &kp BSPC        &kp DEL                                                     &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       &trans
-                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LG(LS(LA(LCTRL))) &kp TAB                                               &kp PRCNT       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
+                &trans  &kp ESC         &trans          &kp LC(F)       &kp TAB         &sk LG(LS(LA(LCTRL)))                                       &kp CARET       &kp C_PP        &kp C_NEXT      &kp TILDE       &kp GRAVE       &trans
+                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &kp BSPC        &kp DEL                                                     &kp PRCNT       &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
                 &trans  &kp LC(Z)       &td1            &kp LC(V)       &kp ENTER       &kp INS     &trans      &trans      &trans      &trans      &kp DLLR        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
                                                         &trans          &trans          &trans      &trans      &trans      &trans      &trans      &kp DEL         &trans          &trans      
             >;
