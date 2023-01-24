@@ -62,7 +62,7 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &mt LGUI A      &mt LALT R      &mt LCTRL S     &mt LG(LS(LA(LCTRL))) T     &kp G                                           &kp M  &mt LG(LS(LA(LCTRL))) N  &mt LCTRL E     &mt LALT I      &mt LGUI O      &none
+                &none   &mk LGUI A      &mk LALT R      &mk LCTRL S     &mk LG(LS(LA(LCTRL))) T     &kp G                                           &kp M  &mk LG(LS(LA(LCTRL))) N  &mk LCTRL E     &mk LALT I      &mk LGUI O      &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V        &none            &none  &none       &none      &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &none
                                                         &none           &none           &ml 1 SPACE &kp LSHFT &none  &none       &key_repeat &ml 2 BSPC      &none           &none
 			>;
