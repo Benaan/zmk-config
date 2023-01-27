@@ -70,7 +70,7 @@
 		};   
         layer_3 {
 			bindings = <
-                &trans  &bootloader     &trans          &trans          &kp PSCRN       &trans                                                      &kp F12          &kp F7         &kp F8          &kp F9          &kp LC(PLUS)    &trans
+                &trans  &bootloader     &trans          &kp CAPS        &kp PSCRN       &trans                                                      &kp F12          &kp F7         &kp F8          &kp F9          &kp LC(PLUS)    &trans
                 &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp F11          &kp F4         &kp F5          &kp F6          &kp LC(MINUS)   &trans
                 &trans  &trans          &trans          &trans          &kp K_APP       &trans      &trans      &trans      &trans      &trans      &kp F10          &kp F1         &kp F2          &kp F3          &kp LC(N0)      &trans
                                                         &trans          &trans          &trans      &trans      &trans      &trans      &trans      &trans          &trans          &trans
