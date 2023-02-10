@@ -18,6 +18,7 @@
         fnArrow: fnArrow {
             label = "ZM_fnArrow";
             compatible = "zmk,behavior-macro";
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings = <&kp KP_EQUAL &kp GREATER_THAN>;
         };
@@ -30,7 +31,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -48,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
