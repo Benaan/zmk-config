@@ -61,16 +61,16 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &hmp LGUI A     &hm LALT R      &hm LCTRL S     &hm LSHFT T     &hm LC(LS(LA(LGUI))) G                         &hm LC(LS(LA(LGUI))) M           &hm LSHFT N     &hm LCTRL E     &hm LALT I      &hmp LGUI O     &none
-                &none   &kp Z           &kp X           &kp C           &kp D           &kp V           &none       &none       &none   &none           &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
+                &none   &hmp LGUI A     &hm LALT R      &hm LCTRL S     &hm LSHFT T     &kp G                                                           &kp M           &hm LSHFT N     &hm LCTRL E     &hm LALT I      &hmp LGUI O     &none
+                &none   &hm LC(LS(LA(LGUI))) Z &kp X    &kp C           &kp D           &kp V           &none       &none       &none   &none           &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
                                                         &none           &none           &hml 1 SPACE    &none       &none       &none   &none           &hml 2 BSPC     &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
                 &trans  &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &trans
-                &trans  &hmp LGUI ESC   &hm LALT INS    &hm LCTRL TAB   &hm LSHFT ENTER &kp LC(LS(LA(LGUI)))                                        &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-                &trans  &kp LGUI        &caps_word      &kp BSPC        &kp DEL         &trans      &trans       &trans      &trans      &trans     &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                &trans  &hmp LGUI ESC   &hm LALT INS    &hm LCTRL TAB   &hm LSHFT ENTER &trans                                                      &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
+                &trans  &kp LC(LS(LA(LGUI))) &caps_word &kp BSPC        &kp DEL         &trans      &trans       &trans      &trans      &trans     &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
                                                         &trans          &trans          &none       &trans       &trans      &trans      &trans     &mo 3           &trans          &trans      
             >;
 		};
@@ -85,8 +85,8 @@
         layer_3 {
 			bindings = <
                 &trans  &bootloader     &trans          &kp CAPS        &kp PSCRN       &trans                                                      &kp F12          &kp F7         &kp F8          &kp F9          &kp LC(PLUS)    &trans
-                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &sk LG(LS(LA(LCTRL)))                                       &kp F11          &kp F4         &kp F5          &kp F6          &kp LC(MINUS)   &trans
-                &trans  &trans          &trans          &trans          &kp K_APP       &trans      &trans      &trans      &trans      &trans      &kp F10          &kp F1         &kp F2          &kp F3          &kp LC(N0)      &trans
+                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT       &trans                                                      &kp F11          &kp F4         &kp F5          &kp F6          &kp LC(MINUS)   &trans
+                &trans  &sk LG(LS(LA(LCTRL))) &trans    &trans          &kp K_APP       &trans      &trans      &trans      &trans      &trans      &kp F10          &kp F1         &kp F2          &kp F3          &kp LC(N0)      &trans
                                                         &trans          &trans          &none       &trans      &trans      &trans      &trans      &none            &trans         &trans
             >;
 		};
