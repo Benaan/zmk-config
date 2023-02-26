@@ -15,45 +15,45 @@
     combos {
         compatible = "zmk,combos";
         combo_lctrl {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <15 16>;
             bindings = <&kp LCTRL>;
         };
         combo_lalt {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <14 16>;
             bindings = <&kp LALT>;
         };
         combo_lgui {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <13 16>;
             bindings = <&kp LGUI>;
         };
          combo_lsuper {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <17 16>;
             bindings = <&kp LC(LS(LA(LGUI)))>;
         };
         combo_rctrl {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <19 20>;
             bindings = <&kp LCTRL>;
             layers = <0>;
         };
         combo_ralt {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <19 21>;
             bindings = <&kp LALT>;
             layers = <0>;
         };
         combo_rgui {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <19 22>;
             bindings = <&kp LGUI>;
             layers = <0>;
         };
         combo_rsuper {
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             key-positions = <19 18>;
             bindings = <&kp LC(LS(LA(LGUI)))>;
             layers = <0>;
@@ -81,16 +81,16 @@
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
-                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
-                                                        &none           &none           &kp SPACE   &mo 1       &none       &none       &kp LSHFT   &mo 2           &none           &none
+                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &kp LCTRL   &none       &none       &kp LGUI    &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
+                                                        &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp LSHFT       &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
                 &trans  &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &trans
                 &trans  &kp ESC         &kp TAB         &kp ENTER       &kp BSPC        &kp DEL                                                     &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-                &trans  &trans          &trans          &trans          &kp INS         &trans      &trans       &trans     &trans      &trans      &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
-                                                        &trans          &trans          &none       &trans       &trans     &trans      &trans      &mo 3           &trans          &trans      
+                &trans  &sk LGUI        &sk LALT        &sk LCTRL       &kp INS         &trans      &trans       &trans     &trans      &trans      &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                                                        &trans          &trans          &none       &trans       &trans     &trans      &mo 3       &trans          &trans          &trans      
             >;
 		};
         layer_2 {
