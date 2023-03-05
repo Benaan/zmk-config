@@ -47,7 +47,7 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &lhp LALT A     &lhp LGUI R     &lhp LCTRL S    &lhp LSHFT T    &kp G                                                       &kp M           &lhp LSHFT N    &lhp LCTRL E    &lhp LGUI I     &lhp LALT O     &none
+                &none   &lht LALT A     &lht LGUI R     &lht LCTRL S    &lht LSHFT T    &kp G                                                       &kp M           &rht LSHFT N    &rht LCTRL E    &rht LGUI I     &rht LALT O     &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
                                                         &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp BSPC        &none           &none
 			>;
@@ -55,7 +55,7 @@
         layer_1 {
 			bindings = <
                 &none   &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none 
-                &none   &lhp LALT ESC   &lhp LGUI INS   &lhp LCTRL TAB  &lhp LSHFT ENTER &kp DEL                                                    &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &lht LALT ESC   &lht LGUI INS   &lht LCTRL TAB  &lht LSHFT ENTER &kp DEL                                                    &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
                 &none   &none           &none           &key_repeat     &caps_word      &none       &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
                                                         &none           &none           &none       &none       &none       &none       &mo 3       &none           &none           &none       
             >;
@@ -71,7 +71,7 @@
         layer_3 {
 			bindings = <
                 &none   &bootloader     &none           &kp CAPS        &kp PSCRN       &none                                                       &none           &none           &none           &none           &none           &none
-                &none   &lhp LALT F1    &lhp LGUI F2    &lhp LCTRL F3   &lhp LSHFT  F4  &kp F5                                                      &kp F6          &lhp LSHFT F7   &lhp LCTRL F8   &lhp LGUI F9    &lhp LALT F10   &none 
+                &none   &lht LALT F1    &lht LGUI F2    &lht LCTRL F3   &lht LSHFT  F4  &kp F5                                                      &kp F6          &rht LSHFT F7   &rht LCTRL F8   &rht LGUI F9    &rht LALT F10   &none 
                 &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &kp F12         &none           &none           &none           &none           &none
                                                         &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
             >;
