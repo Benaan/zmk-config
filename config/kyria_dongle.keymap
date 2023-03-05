@@ -7,82 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-&sk {
-    quick-release;
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_l1 {
-            timeout-ms = <30>;
-            key-positions = <42 16>;
-            bindings = <&kp LSHFT>;
-            slow-release;
-        };
-        combo_l2 {
-            timeout-ms = <30>;
-            key-positions = <42 15>;
-            bindings = <&kp LCTRL>;
-            slow-release;
-        };
-        combo_l3 {
-            timeout-ms = <30>;
-            key-positions = <42 14>;
-            bindings = <&kp LGUI>;
-            slow-release;
-        };
-        combo_l4 {
-            timeout-ms = <30>;
-            key-positions = <42 13>;
-            bindings = <&kp LALT>;
-            slow-release;
-        };
-        combo_l5 {
-            timeout-ms = <30>;
-            key-positions = <42 17>;
-            bindings = <&kp LC(LS(LA(LGUI)))>;
-            slow-release;
-        };
-        combo_r1 {
-            timeout-ms = <30>;
-            key-positions = <19 20>;
-            bindings = <&kp RSHFT>;
-            layers = <0>;
-            slow-release;
-        };
-        combo_r2 {
-            timeout-ms = <30>;
-            key-positions = <19 21>;
-            bindings = <&kp RCTRL>;
-            layers = <0>;
-            slow-release;
-        };
-        combo_r3 {
-            timeout-ms = <30>;
-            key-positions = <19 22>;
-            bindings = <&kp LGUI>;
-            layers = <0>;
-            slow-release;
-        };
-        combo_r4 {
-            timeout-ms = <30>;
-            key-positions = <19 38>;
-            bindings = <&kp LALT>;
-            layers = <0>;
-            slow-release;
-        };
-        combo_r5 {
-            timeout-ms = <30>;
-            key-positions = <19 18>;
-            bindings = <&kp LC(LS(LA(LGUI)))>;
-            layers = <0>;
-            slow-release;
-        };
-    };
-};
-
-
 / {
     macros {
         fnArrow: fnArrow {
@@ -96,12 +20,34 @@
 };
 
 / {   
+        behaviors {
+        lht: left_hand_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49>;
+        };
+        rht: right_hand_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49>;
+        };
+    };
 	keymap {
 		compatible = "zmk,keymap";
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
+                &none   &lhp LALT A     &lhp LGUI R     &lhp LCTRL S    &lhp LSHFT T    &kp G                                                       &kp M           &lhp LSHFT N    &lhp LCTRL E    &lhp LGUI I     &lhp LALT O     &none
                 &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
                                                         &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp BSPC        &none           &none
 			>;
@@ -109,8 +55,8 @@
         layer_1 {
 			bindings = <
                 &none   &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none 
-                &none   &kp ESC         &kp INS         &kp TAB         &kp ENTER       &kp DEL                                                     &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
-                &none   &none           &none           &none           &none           &key_repeat &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
+                &none   &lhp LALT ESC   &lhp LGUI INS   &lhp LCTRL TAB  &lhp LSHFT ENTER &kp DEL                                                    &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &none           &none           &key_repeat     &caps_word      &none       &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
                                                         &none           &none           &none       &none       &none       &none       &mo 3       &none           &none           &none       
             >;
 		};
@@ -125,7 +71,7 @@
         layer_3 {
 			bindings = <
                 &none   &bootloader     &none           &kp CAPS        &kp PSCRN       &none                                                       &none           &none           &none           &none           &none           &none
-                &none   &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                                      &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none 
+                &none   &lhp LALT F1    &lhp LGUI F2    &lhp LCTRL F3   &lhp LSHFT  F4  &kp F5                                                      &kp F6          &lhp LSHFT F7   &lhp LCTRL F8   &lhp LGUI F9    &lhp LALT F10   &none 
                 &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &kp F12         &none           &none           &none           &none           &none
                                                         &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
             >;
@@ -137,3 +83,9 @@
 //	            &none   &none           &none           &none           &none           &none                                                       &none           &none           &none           &none           &none           &none 
 //	            &none   &none           &none           &none           &none           &none       &none       &none       &none       &none       &none           &none           &none           &none           &none           &none 
 //	                                                    &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
+
+
+//	            0       1               2               3               4               5                                                           6               7               8               9               10              11
+//              12      13              14              15              16              17                                                          18              19              20              21              22              23
+//              24      25              26              27              28              29          30          31          32          33          34              35              36              37              38              39
+//                                                      40              41              42          43          44          45          46          47              48              49
