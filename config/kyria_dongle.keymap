@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define SCA LS(LC(LALT))
+
 / {
     macros {
         fnArrow: fnArrow {
@@ -21,20 +23,47 @@
 
 / {   
         behaviors {
-        fht: fast_hold_tap {
+        ht1: ht1 {
             compatible = "zmk,behavior-hold-tap";
-            label = "FAST_HOLD_TAP";
+            label = "HT1";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        sht: slow_hold_tap {
+        ht2: ht2 {
             compatible = "zmk,behavior-hold-tap";
-            label = "SLOW_HOLD_TAP";
+            label = "HT2";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        ht3: ht3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT3";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        ht4: ht4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT4";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        ht5: ht5 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT5";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -45,16 +74,16 @@
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
-                &none   &sht LALT A     &sht LGUI R     &fht LCTRL S    &fht LSHFT T    &kp G                                                       &kp M           &fht LSHFT N    &fht LCTRL E    &sht LGUI I     &sht LALT O     &none
-                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
+                &none   &ht4 LALT A     &ht3 LGUI R     &ht2 LCTRL S    &ht1 LSHFT T    &kp G                                                       &kp M           &ht1 LSHFT N    &ht2 LCTRL E    &ht3 LGUI I     &ht4 LALT O     &none
+                &none   &kp Z           &kp X           &kp C           &ht5 SCA D      &kp V       &none       &none       &none       &none       &kp K           &ht5 SCA H      &kp COMMA       &kp DOT         &kp QMARK       &none
                                                         &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp BSPC        &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
                 &none   &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none 
-                &none   &sht LALT ESC   &sht LGUI INS   &fht LCTRL TAB  &fht LSHFT ENTER &kp DEL                                                    &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
-                &none   &none           &none           &key_repeat     &caps_word      &none       &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
+                &none   &ht4 LALT ESC   &ht3 LGUI INS   &ht2 LCTRL TAB  &ht1 LSHFT ENTER &key_repeat                                                &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &none           &kp BSPC        &kp DEL         &caps_word      &none       &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
                                                         &none           &none           &none       &none       &none       &none       &mo 3       &none           &none           &none       
             >;
 		};
@@ -69,7 +98,7 @@
         layer_3 {
 			bindings = <
                 &none   &bootloader     &none           &kp CAPS        &kp PSCRN       &none                                                       &none           &none           &none           &none           &none           &none
-                &none   &sht LALT F1    &sht LGUI F2    &fht LCTRL F3   &fht LSHFT  F4  &kp F5                                                      &kp F6          &fht LSHFT F7   &fht LCTRL F8   &sht LGUI F9    &sht LALT F10   &none 
+                &none   &ht4 LALT F1    &ht3 LGUI F2    &ht2 LCTRL F3   &ht1 LSHFT  F4  &kp F5                                                      &kp F6          &ht1 LSHFT F7   &ht2 LCTRL F8   &ht3 LGUI F9    &ht4 LALT F10   &none 
                 &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &kp F12         &none           &none           &none           &none           &none
                                                         &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
             >;
