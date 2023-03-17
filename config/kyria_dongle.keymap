@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT2";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT5";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
