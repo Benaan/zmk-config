@@ -10,6 +10,17 @@
 #define SCA LS(LC(LALT))
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&tog 4>;
+        };
+    };
+};
+
+/ {
     macros {
         fnArrow: fnArrow {
             label = "ZM_fnArrow";
@@ -101,6 +112,14 @@
                 &none   &ht4 LALT F1    &ht3 LGUI F2    &ht2 LCTRL F3   &ht1 LSHFT  F4  &kp F5                                                      &kp F6          &ht1 LSHFT F7   &ht2 LCTRL F8   &ht3 LGUI F9    &ht4 LALT F10   &none 
                 &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &kp F12         &none           &none           &none           &none           &none
                                                         &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
+            >;
+		};
+        layer_4 {
+			bindings = <
+                &none   &kp Q           &kp W           &kp E           &kp R           &kp T                                                       &kp Y           &kp U           &kp I           &kp LGUI        &kp LALT        &none
+                &none   &kp A           &kp D           &kp F           &kp F           &kp G                                                       &kp H           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &kp Z           &kp X           &kp C           &kp V           &kp B       &none       &none       &none       &none       &kp N           &kp ENTER       &kp TAB         &kp BSPC        &kp ESC         &none
+                                                        &none           &none           &kp LSHFT   &kp LCTRL   &none       &none       &kp TAB     &kp SPACE       &none           &none 
             >;
 		};
 	};
