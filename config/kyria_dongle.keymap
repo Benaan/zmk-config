@@ -117,7 +117,7 @@
         layer_4 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp E           &kp R           &kp T                                                       &kp Y           &kp U           &kp I           &kp LGUI        &kp LALT        &none
-                &none   &kp A           &kp D           &kp F           &kp F           &kp G                                                       &kp H           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &kp A           &kp S           &kp D           &kp F           &kp G                                                       &kp H           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
                 &none   &kp Z           &kp X           &kp C           &kp V           &kp B       &none       &none       &none       &none       &kp N           &kp ENTER       &kp TAB         &kp BSPC        &kp ESC         &none
                                                         &none           &none           &kp LSHFT   &kp LCTRL   &none       &none       &kp TAB     &kp SPACE       &none           &none 
             >;
