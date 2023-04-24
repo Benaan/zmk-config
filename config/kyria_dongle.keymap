@@ -44,7 +44,7 @@
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
-                &none   &kp Z           &kp X           &kp C           &ht5 SCA D      &kp V       &none       &none       &none       &none       &kp K           &ht5 SCA H      &kp COMMA       &kp DOT         &kp QMARK       &none
+                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
                                                         &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp BSPC        &none           &none
 			>;
 		};   
