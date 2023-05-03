@@ -17,10 +17,58 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_game {
             timeout-ms = <50>;
             key-positions = <6 7>;
             bindings = <&tog 4>;
+        };
+        combo_lshft {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kp LSHFT>;
+            slow-release;
+        };
+        combo_lctrl {
+            timeout-ms = <50>;
+            key-positions = <15 27>;
+            bindings = <&kp LCTRL>;
+            slow-release;
+        };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <14 26>;
+            bindings = <&kp LGUI>;
+            slow-release;
+        };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <13 25>;
+            bindings = <&kp LALT>;
+            slow-release;
+        };
+        combo_rshft {
+            timeout-ms = <50>;
+            key-positions = <19 35>;
+            bindings = <&kp LSHFT>;
+            slow-release;
+        };
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <20 36>;
+            bindings = <&kp LCTRL>;
+            slow-release;
+        };
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <21 37>;
+            bindings = <&kp LGUI>;
+            slow-release;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <22 38>;
+            bindings = <&kp LALT>;
+            slow-release;
         };
     };
 };
@@ -51,8 +99,8 @@
         layer_1 {
 			bindings = <
                 &none   &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none 
-                &none   &kp ESC         &sk LGUI        &sk LCTRL       &sk LSHFT       &key_repeat                                                 &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
-                &none   &sk LALT        &kp INS         &kp TAB         &kp ENTER       &caps_word  &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
+                &none   &kp ESC         &kp INS         &kp TAB         &kp ENTER       &key_repeat                                                 &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &none           &kp BSPC        &kp DEL         &caps_word      &none       &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
                                                         &none           &none           &none       &none       &none       &none       &mo 3       &kp DEL         &none           &none       
             >;
 		};
@@ -68,7 +116,7 @@
 			bindings = <
                 &none   &bootloader     &none           &kp CAPS        &kp PSCRN       &none                                                       &none           &none           &none           &none           &none           &none
                 &none   &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                                      &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none 
-                &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &kp F12         &none           &none           &none           &none           &none
+                &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &none           &kp F12         &none           &none           &none           &none
                                                         &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
             >;
 		};
