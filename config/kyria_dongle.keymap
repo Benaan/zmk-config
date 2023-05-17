@@ -70,6 +70,24 @@
             bindings = <&kp LALT>;
             slow-release;
         };
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <2 14>;
+            bindings = <&kp LC(X)>;
+            slow-release;
+        };
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <3 15>;
+            bindings = <&kp LC(C)>;
+            slow-release;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <4 16>;
+            bindings = <&kp LC(V)>;
+            slow-release;
+        };
     };
 };
 
