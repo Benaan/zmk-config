@@ -97,49 +97,49 @@
 
         combo_lshft_thumb_2 {
             timeout-ms = <50>;
-            key-positions = <16 42>;
+            key-positions = <16 43>;
             bindings = <&kp LSHFT>;
             slow-release;
         };
         combo_lctrl_thumb {
             timeout-ms = <50>;
-            key-positions = <15 42>;
+            key-positions = <15 43>;
             bindings = <&kp LCTRL>;
             slow-release;
         };
         combo_lgui_thumb {
             timeout-ms = <50>;
-            key-positions = <14 42>;
+            key-positions = <14 43>;
             bindings = <&kp LGUI>;
             slow-release;
         };
         combo_lalt_thumb {
             timeout-ms = <50>;
-            key-positions = <13 42>;
+            key-positions = <13 43>;
             bindings = <&kp LALT>;
             slow-release;
         };
         combo_rshft_thumb {
             timeout-ms = <50>;
-            key-positions = <19 47>;
+            key-positions = <19 46>;
             bindings = <&kp LSHFT>;
             slow-release;
         };
         combo_rctrl_thumb {
             timeout-ms = <50>;
-            key-positions = <20 47>;
+            key-positions = <20 46>;
             bindings = <&kp LCTRL>;
             slow-release;
         };
         combo_rgui_thumb {
             timeout-ms = <50>;
-            key-positions = <21 47>;
+            key-positions = <21 46>;
             bindings = <&kp LGUI>;
             slow-release;
         };
         combo_ralt_thumb {
             timeout-ms = <50>;
-            key-positions = <22 47>;
+            key-positions = <22 46>;
             bindings = <&kp LALT>;
             slow-release;
         };
