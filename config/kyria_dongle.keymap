@@ -88,6 +88,12 @@
             bindings = <&kp LC(V)>;
             slow-release;
         };
+        combo_lshft_thumb {
+            timeout-ms = <50>;
+            key-positions = <42 43>;
+            bindings = <&kp LSHFT>;
+            slow-release;
+        };
     };
 };
 
