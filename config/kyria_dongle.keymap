@@ -22,72 +22,6 @@
             key-positions = <6 7>;
             bindings = <&tog 4>;
         };
-        combo_lshft {
-            timeout-ms = <50>;
-            key-positions = <16 28>;
-            bindings = <&kp LSHFT>;
-            slow-release;
-        };
-        combo_lctrl {
-            timeout-ms = <50>;
-            key-positions = <15 27>;
-            bindings = <&kp LCTRL>;
-            slow-release;
-        };
-        combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <14 26>;
-            bindings = <&kp LGUI>;
-            slow-release;
-        };
-        combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <13 25>;
-            bindings = <&kp LALT>;
-            slow-release;
-        };
-        combo_rshft {
-            timeout-ms = <50>;
-            key-positions = <19 35>;
-            bindings = <&kp LSHFT>;
-            slow-release;
-        };
-        combo_rctrl {
-            timeout-ms = <50>;
-            key-positions = <20 36>;
-            bindings = <&kp LCTRL>;
-            slow-release;
-        };
-        combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <21 37>;
-            bindings = <&kp LGUI>;
-            slow-release;
-        };
-        combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <22 38>;
-            bindings = <&kp LALT>;
-            slow-release;
-        };
-        combo_cut {
-            timeout-ms = <50>;
-            key-positions = <2 14>;
-            bindings = <&kp LC(X)>;
-            slow-release;
-        };
-        combo_copy {
-            timeout-ms = <50>;
-            key-positions = <3 15>;
-            bindings = <&kp LC(C)>;
-            slow-release;
-        };
-        combo_paste {
-            timeout-ms = <50>;
-            key-positions = <4 16>;
-            bindings = <&kp LC(V)>;
-            slow-release;
-        };
     };
 };
 
@@ -104,30 +38,50 @@
 };
 
 / {   
+	    behaviors {
+	        hm: homerow_mods {
+	            compatible = "zmk,behavior-hold-tap";
+	            label = "HOMEROW_MODS";
+	            #binding-cells = <2>;
+	            tapping-term-ms = <250>;
+	            quick-tap-ms = <0>;
+	            flavor = "tap-preferred";
+	            bindings = <&kp>, <&kp>;
+	        };
+  		hml: homerow_mods_layer {
+	            compatible = "zmk,behavior-hold-tap";
+	            label = "HOMEROW_MODS";
+	            #binding-cells = <2>;
+	            tapping-term-ms = <250>;
+	            quick-tap-ms = <0>;
+	            flavor = "tap-preferred";
+	            bindings = <&kp>, <&mo>;
+	        };
+	    };
 	keymap {
 		compatible = "zmk,keymap";
 		layer_0 {
 			bindings = <
                 &none   &kp Q           &kp W           &kp F           &kp P           &kp B                                                       &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none   &kp A           &kp R           &kp S           &kp T           &kp G                                                       &kp M           &kp N           &kp E           &kp I           &kp O           &none
-                &none   &kp Z           &kp X           &kp C           &kp D           &kp V       &none       &none       &none       &none       &kp K           &kp H           &kp COMMA       &kp DOT         &kp QMARK       &none
-                                                        &none           &none           &kp SPACE   &mo 1       &none       &none       &mo 2       &kp BSPC        &none           &none
+                &none   &hml Z 1        &hm X LALT      &hm C LGUI      &kp D           &kp V       &none       &none       &none       &none       &kp K           &hm H LCTRL     &hm COMMA       &kp DOT         &kp QMARK       &none
+                                                        &none           &none           &kp SPACE   &kp LCTRL   &none       &none       &mo 2       &kp LSHFT       &none           &none
 			>;
 		};   
         layer_1 {
 			bindings = <
                 &none   &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                                      &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none 
-                &none   &kp ESC         &kp INS         &kp TAB         &kp ENTER       &kp F5                                                      &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
-                &none   &kp F7          &kp BSPC        &kp DEL         &caps_word      &kp F6      &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
-                                                        &none           &none           &none       &none       &none       &none       &mo 3       &kp BSPC        &none           &none       
+	        &none   &kp INS         &kp ESC         &kp BSPC        &kp ENTER       &kp DEL                                                     &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none 
+                &none   &none           &kp LALT        &kp LGUI        &kp TAB         &kp F5      &none       &none       &none       &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none 
+                                                        &none           &none           &kp SPACE   &kp LCTRL 	&none       &none       &mo 3       &kp LSHFT        &none           &none       
             >;
 		};
         layer_2 {
 			bindings = <
                 &none   &none           &kp AT          &kp AMPS        &kp PIPE        &fnArrow                                                    &kp LT          &kp TILDE       &kp PRCNT       &kp DLLR        &kp GRAVE       &none 
                 &none   &kp SEMI        &kp EXCL        &kp LBRC        &kp LPAR        &kp LBKT                                                    &kp ASTRK       &kp EQUAL       &kp MINUS       &kp COLON       &kp FSLH        &none 
-                &none   &none           &kp HASH        &kp RBRC        &kp RPAR        &kp RBKT    &none       &none       &none       &none       &kp GT          &kp UNDER       &kp PLUS        &kp CARET       &kp BSLH        &none 
-    	                                                &none           &none           &none       &mo 3       &none       &none       &none       &none           &none           &none  
+                &none   &mo 3           &kp HASH        &kp RBRC        &kp RPAR        &kp RBKT    &none       &none       &none       &none       &kp GT          &kp UNDER       &kp PLUS        &kp CARET       &kp BSLH        &none 
+    	                                                &none           &none           &kp SPACE   &none       &none       &none       &none       &none           &none           &none  
             >;
 		};   
         layer_3 {
@@ -135,7 +89,7 @@
                 &none   &bootloader     &none           &kp CAPS        &kp PSCRN       &none                                                       &none           &none           &none           &none           &none           &none
                 &none   &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                                      &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none 
                 &none   &none           &none           &kp K_APP       &kp F11         &none       &none       &none       &none       &none       &none           &kp F12         &none           &none           &none           &none
-                                                        &none           &none           &none       &none       &none       &none       &none       &none           &none           &none 
+                                                        &none           &none           &kp SPACE   &kp LCTRL   &none       &none       &none       &kp LSHFT   z    &none           &none 
             >;
 		};
         layer_4 {
