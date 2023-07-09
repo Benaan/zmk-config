@@ -1,0 +1,17 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SWEEP_DONGLE
+    bool
+
+config SHIELD_SWEEP_DONGLE_CENTRAL
+    def_bool $(shields_list_contains,sweep_dongle_central)
+	select SHIELD_SWEEP_DONGLE
+
+config SHIELD_SWEEP_DONGLE_LEFT
+	def_bool $(shields_list_contains,sweep_dongle_left)
+	select SHIELD_SWEEP_DONGLE
+
+config SHIELD_SWEEP_DONGLE_RIGHT
+	def_bool $(shields_list_contains,sweep_dongle_right)
+	select SHIELD_SWEEP_DONGLE
