@@ -1,5 +1,5 @@
 
-if SHIELD_SWEEP_DONGLE_CENTRAL
+if SHIELD_SWEEP_CENTRAL
 
 config ZMK_KEYBOARD_NAME
 	default "Sweep"
@@ -9,7 +9,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_SWEEP_DONGLE
+if SHIELD_SWEEP
 
 config ZMK_SPLIT
 	default y
