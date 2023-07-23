@@ -21,6 +21,7 @@
             key-positions = <30 31>;
             bindings = <&mo 1>;
 			layers = <0>;
+			slow-release;
         };
     };
 };
