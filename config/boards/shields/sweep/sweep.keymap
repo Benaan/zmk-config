@@ -18,7 +18,7 @@
         };
 		combo_layer1 {
             timeout-ms = <15>;
-            key-positions = 24 30>;
+            key-positions = <24 30>;
             bindings = <&mo 1>;
 			layers = <0>
         };
