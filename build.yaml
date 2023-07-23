@@ -22,8 +22,8 @@
 #  - board: nice_nano_v2
 #    shield: kyria_dongle_central
 
-# board: [ "nice_nano_v2" ]
-# shield: [ "kyria_dongle_central" ] #, "kyria_dongle_left", "kyria_dongle_right" ] 
-
 board: [ "nice_nano_v2" ]
-shield: [ "sweep_central" ] #, "sweep_left", "sweep_right" ] 
+shield: [ "kyria_dongle_central", "kyria_dongle_left", "kyria_dongle_right" ] 
+
+#board: [ "nice_nano_v2" ]
+#shield: [ "sweep_central" ] #, "sweep_left", "sweep_right" ] 
