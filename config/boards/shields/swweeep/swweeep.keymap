@@ -5,8 +5,8 @@
     combos {
         compatible = "zmk,combos";
         combo_game {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
+            timeout-ms = <30>;
+            key-positions = <5 6>;
             bindings = <&tog 4>;
         };
     };
@@ -33,7 +33,7 @@
                 &kp A           &kp R           &kp S           &kp T           &kp G                       &kp M           &kp N           &kp E           &kp I           &kp O          
                 &kp Z           &kp X           &kp C           &kp D           &kp V                       &kp K           &kp H           &kp COMMA       &kp DOT         &kp LALT       
                                                 &kp SPACE       &mo 1           &kp LCTRL                   &kp LGUI        &mo 2           &kp LSHFT     
-			>;Ç
+			>;
 		};   
         layer_1 {
 			bindings = <
