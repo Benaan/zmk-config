@@ -18,8 +18,8 @@
 #board: [ "nice_nano_v2" ]
 #shield: [ "sweep_central" ] #, "sweep_left", "sweep_right" ] 
 
-board: [ "nice_nano_v2" ]
-shield: ["swweeep_left", "swweeep_right" ] 
-
 #board: [ "nice_nano_v2" ]
-#shield: [ "settings_reset"]
+#shield: ["swweeep_left", "swweeep_right" ] 
+
+board: [ "nice_nano_v2" ]
+shield: [ "settings_reset"]
