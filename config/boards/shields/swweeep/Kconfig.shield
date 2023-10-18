@@ -1,6 +1,9 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+config SHIELD_SWWEEEP_CENTRAL
+    def_bool $(shields_list_contains,swweeep_central)
+
 config SHIELD_SWWEEEP_LEFT
     def_bool $(shields_list_contains,swweeep_left)
 
