@@ -17,13 +17,13 @@
             timeout-ms = <30>;
             key-positions = <5 7>;
             bindings = <&to 5>;
-	    layers = <0>
+	    layers = <0>;
         };
         combo_colemak {
             timeout-ms = <30>;
             key-positions = <5 7>;
             bindings = <&to 0>;
-	    layers = <5>
+	    layers = <5>;
         };
     };
 };
