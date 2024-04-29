@@ -78,7 +78,7 @@
         layer_4 {
 			bindings = <
                 &kp Q           &kp W           &kp E           &kp R           &kp T                       &kp Y           &kp U           &kp UP          &kp O           &kp ESC        
-                &kp A           &kp S           &kp D           &kp F           &kp G                       &kp H           &kp LEFT        &kp DOWN        &kp RIGHT       &kp TAB        
+                &kp A           &kp S           &kp D           &kp F           &kp G                       &kp H           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT        
                 &kp Z           &kp X           &kp C           &kp V           &kp B                       &kp N           &kp M           &kp COMMA       &kp DOT         &kp ENTER       
                                                  &kp SPACE      &kp LSHFT       &kp LCTRL                   &kp ENTER       &kp BSPC        &kp BSPC
             >;
