@@ -1,0 +1,11 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SOUFFLE_CENTRAL
+    def_bool $(shields_list_contains,souffle_central)
+
+config SHIELD_SOUFFLE_LEFT
+    def_bool $(shields_list_contains,souffle_left)
+
+config SHIELD_SOUFFLE_RIGHT
+    def_bool $(shields_list_contains,souffle_right)
