@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 The ZMK Contributors
+ * Copyright (c) 2020 Ryan Cross
  *
  * SPDX-License-Identifier: MIT
  */
@@ -19,4 +19,8 @@
         , <&pro_micro 18 GPIO_ACTIVE_HIGH>
         , <&pro_micro 19 GPIO_ACTIVE_HIGH>
         ;
+};
+
+&right_encoder {
+    status = "okay";
 };
