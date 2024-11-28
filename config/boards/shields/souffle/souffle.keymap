@@ -60,7 +60,7 @@
         combo_t2 {
             timeout-ms = <TIMEOUT>;
             key-positions = <14 15>;
-            bindings = <&kp HASH>>;
+            bindings = <&kp HASH>;
             layers = <1>;
         };
         combo_t3 {
