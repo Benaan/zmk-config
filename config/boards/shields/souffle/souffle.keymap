@@ -44,7 +44,7 @@
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &none
                 &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp SEMI
                 &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LSHFT           &kp LALT    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &none
-                &kp LCTRL                                       &none           &kp none        &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
+                &kp LCTRL                                       &none           &none           &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
 			>;
 		};  
         layer_1 {
