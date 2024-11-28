@@ -102,7 +102,7 @@
         };
         combo_b3 {
             timeout-ms = <TIMEOUT>;
-            key-positions = <37 38;
+            key-positions = <37 38>;
             bindings = <&kp PRCNT>;
             layers = <1>;
         };
