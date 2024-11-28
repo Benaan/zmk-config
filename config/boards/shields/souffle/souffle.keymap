@@ -24,18 +24,12 @@
             bindings = <&sys_reset>;
             layers = <1>;
         };
-        studio {
+        bootloader_central {
             timeout-ms = <30>;
-            key-positions = <6 10>;
-            bindings = <&studio_unlock>;
+            key-positions = <6 9>;
+            bindings = <&bootloader>;
             layers = <1>;
         };
-                bootloader_central {
-                    timeout-ms = <30>;
-                    key-positions = <6 9>;
-                    bindings = <&bootloader>;
-                    layers = <1>;
-                };
     };
 };
 
@@ -56,17 +50,17 @@
 	    compatible = "zmk,keymap";
 	    layer_0 {
 			bindings = <
-                &kp ESC         &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &kp LBKT
-                &kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &kp RBKT
+                &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &kp LBKT
+                &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &kp RBKT
                 &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp SEMI
-                &kp ENTER       &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LALT            &kp C_PP    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &kp BSLH
-                &kp LCTRL                                       &kp LGUI        &mo 1           &kp SPACE       &kp LSHFT           &mo 1       &kp LSHFT       &kp LGUI        &kp LALT                                       &kp LCTRL    
+                &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LALT            &kp C_PP    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &kp BSLH
+                &kp LCTRL                                       &kp LGUI        &kp LSHFT       &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &kp LGUI        &kp LALT                                       &kp LCTRL
 			>;
 		};  
         layer_1 {
 			bindings = <
                 &kp F12         &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11        
-                &studio_unlock           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none       
+                &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
                 &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &none                                           &none           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       
                 &none           &none           &none           &kp INS         &kp DEL         &none           &none               &none       &none           &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none       
                 &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none   
