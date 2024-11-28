@@ -72,7 +72,7 @@
         combo_t4 {
             timeout-ms = <TIMEOUT>;
             key-positions = <13 16>;
-            bindings = <&kp AT;
+            bindings = <&kp AT>;
             layers = <1>;
         };
         combo_t5 {
