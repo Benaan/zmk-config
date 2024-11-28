@@ -3,25 +3,131 @@
 
 #define HYPER LS(LC(LA(LGUI)))
 
-#define TIMEOUT 30
+#define TIMEOUT 50
 
 / {
     combos {
         compatible = "zmk,combos";
-        combo_game {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <6 7>;
-            bindings = <&tog 2>;
-            layers = <1>;
-        };
         bootloader_central {
             timeout-ms = <TIMEOUT>;
             key-positions = <6 9>;
             bindings = <&bootloader>;
             layers = <1>;
         };
+        combo_h1 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <27 28>;
+            bindings = <&kp EQUAL>;
+            layers = <1>;
+        };
+        combo_h2 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <26 27>;
+            bindings = <&kp MINUS>;
+            layers = <1>;
+        };
+        combo_h3 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <25 26>;
+            bindings = <&kp PLUS>;
+            layers = <1>;
+        };
+        combo_h4 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <25 28>;
+            bindings = <&kp EXCL>;
+            layers = <1>;
+        };
+        combo_h5 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <26 28>;
+            bindings = <&kp AMPS>;
+            layers = <1>;
+        };
+        combo_h6 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <25 27>;
+            bindings = <&kp PIPE>;
+            layers = <1>;
+        };
+
+        combo_t1 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <15 16>;
+            bindings = <&kp FSLH>;
+            layers = <1>;
+        };
+        combo_t2 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <14 15>;
+            bindings = <&kp HASH>>;
+            layers = <1>;
+        };
+        combo_t3 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <13 14>;
+            bindings = <&kp BSLH>;
+            layers = <1>;
+        };
+        combo_t4 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <13 16>;
+            bindings = <&kp AT;
+            layers = <1>;
+        };
+        combo_t5 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <14 16>;
+            bindings = <&kp DLLR>;
+            layers = <1>;
+        };
+        combo_t6 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <13 15>;
+            bindings = <&kp CARET>;
+            layers = <1>;
+        };
+
+        combo_b1 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <39 40>;
+            bindings = <&kp QMARK>;
+            layers = <1>;
+        };
+        combo_b2 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <38 39>;
+            bindings = <&kp ASTRK>;
+            layers = <1>;
+        };
+        combo_b3 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <37 38;
+            bindings = <&kp PRCNT>;
+            layers = <1>;
+        };
+        combo_b4 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <37 40>;
+            bindings = <&kp COLON>;
+            layers = <1>;
+        };
+        combo_b5 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <38 40>;
+            bindings = <&kp GRAVE>;
+            layers = <1>;
+        };
+        combo_b6 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <37 39>;
+            bindings = <&kp TILDE>;
+            layers = <1>;
+        };
+
     };
 };
+
 
 / {
     macros {
@@ -42,7 +148,7 @@
 			bindings = <
                 &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &none
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &none
-                &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp SEMI
+                &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp HYPER
                 &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LSHFT           &kp LALT    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &none
                 &kp LCTRL                                       &none           &none           &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
 			>;
@@ -50,22 +156,13 @@
         layer_1 {
 			bindings = <
                 &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none
-                &none           &none           &none           &none           &none           &kp F11                                         &kp F12         &none           &none           &none           &none           &none
-                &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &none                                           &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none
-                &none           &none           &none           &kp INS         &kp DEL         &none           &none               &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none
+                &none           &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp F11                                         &kp F12         &kp INS         &none           &none           &kp GRAVE       &none
+                &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &fnArrow                                        &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none
+                &none           &kp SEMI        &kp LBKT        &kp RBKT        &kp DEL         &kp UNDER       &none               &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none
                 &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none   
 
 		    >;         
 		};
-        layer_2 {
-			bindings = <
-                &kp ESC         &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &kp LBKT
-                &kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp UP          &kp Y           &kp APOS       &kp RBKT
-                &kp BSPC        &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp LEFT        &kp DOWN        &kp RIGHT       &kp O          &kp SEMI
-                &kp ENTER       &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LALT            &kp C_PP    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &kp BSLH
-                &kp LCTRL                                       &kp LGUI        &mo 1           &kp SPACE       &kp LSHFT           &mo 1       &kp LSHFT       &kp LGUI        &kp LALT                                       &kp LCTRL    
-			>;
-		};   
 	};
 };
 
