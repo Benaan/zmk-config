@@ -155,11 +155,11 @@
 		};  
         layer_1 {
 			bindings = <
-                &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none
-                &none           &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp F11                                         &kp F12         &kp INS         &none           &none           &kp GRAVE       &none
-                &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &fnArrow                                        &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none
-                &none           &kp SEMI        &kp LBKT        &kp RBKT        &kp DEL         &kp UNDER       &none               &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none
-                &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none   
+                &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &trans
+                &trans          &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp F11                                         &kp F12         &kp INS         &trans          &trans          &kp GRAVE       &trans
+                &trans          &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &fnArrow                                        &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
+                &trans          &kp SEMI        &kp LBKT        &kp RBKT        &kp DEL         &kp UNDER       &trans              &trans      &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                &trans                                          &trans          &trans          &trans          &trans              &trans      &trans          &trans          &trans                                          &trans
 
 		    >;         
 		};
