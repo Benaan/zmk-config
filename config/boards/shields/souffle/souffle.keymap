@@ -3,29 +3,19 @@
 
 #define HYPER LS(LC(LA(LGUI)))
 
+#define TIMEOUT 30
+
 / {
     combos {
         compatible = "zmk,combos";
         combo_game {
-            timeout-ms = <30>;
+            timeout-ms = <TIMEOUT>;
             key-positions = <6 7>;
             bindings = <&tog 2>;
             layers = <1>;
         };
-        combo_game2 {
-            timeout-ms = <30>;
-            key-positions = <7 9>;
-            bindings = <&tog 3>;
-            layers = <0 3>;
-        };
-        reset_central {
-            timeout-ms = <30>;
-            key-positions = <6 8>;
-            bindings = <&sys_reset>;
-            layers = <1>;
-        };
         bootloader_central {
-            timeout-ms = <30>;
+            timeout-ms = <TIMEOUT>;
             key-positions = <6 9>;
             bindings = <&bootloader>;
             layers = <1>;
@@ -50,34 +40,24 @@
 	    compatible = "zmk,keymap";
 	    layer_0 {
 			bindings = <
-                &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &kp LBKT
-                &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &kp RBKT
+                &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &none
+                &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &none
                 &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp SEMI
-                &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LALT            &kp C_PP    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &kp BSLH
-                &kp LCTRL                                       &kp LGUI        &kp LSHFT       &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &kp LGUI        &kp LALT                                       &kp LCTRL
+                &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LSHFT           &kp LALT    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &none
+                &kp LCTRL                                       &none           &kp none        &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
 			>;
 		};  
         layer_1 {
 			bindings = <
-                &kp F12         &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11        
-                &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
-                &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &none                                           &none           &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none       
-                &none           &none           &none           &kp INS         &kp DEL         &none           &none               &none       &none           &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none       
+                &none           &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &none
+                &none           &none           &none           &none           &none           &kp F11                                         &kp F12         &none           &none           &none           &none           &none
+                &none           &kp ESC         &kp TAB		    &kp ENTER       &kp BSPC        &none                                           &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none
+                &none           &none           &none           &kp INS         &kp DEL         &none           &none               &none       &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &none
                 &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none   
 
 		    >;         
 		};
-
         layer_2 {
-			bindings = <
-                &kp ESC         &none           &none           &none           &none           &none                                           &tog 2          &none           &none           &none           &none           &none       
-                &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none       
-                &none           &none           &none           &none           &none           &none                                           &none           &none           &kp UP          &none           &none           &none       
-                &none           &kp Z           &kp X           &kp LCTRL       &none           &none           &none               &none       &none           &kp LEFT        &kp DOWN        &kp RIGHT       &none           &none       
-                &kp LCTRL                                       &none           &none           &kp LSHFT       &kp LSHFT           &none       &none           &none           &none                                           &none       
-		    >;         
-		};
-        layer_3 {
 			bindings = <
                 &kp ESC         &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0         &kp LBKT
                 &kp TAB         &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp UP          &kp Y           &kp APOS       &kp RBKT
