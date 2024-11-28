@@ -24,12 +24,18 @@
             bindings = <&sys_reset>;
             layers = <1>;
         };
-        bootloader_central {
+        studio {
             timeout-ms = <30>;
-            key-positions = <6 9>;
-            bindings = <&bootloader>;
+            key-positions = <6 10>;
+            bindings = <&studio_unlock>;
             layers = <1>;
         };
+                bootloader_central {
+                    timeout-ms = <30>;
+                    key-positions = <6 9>;
+                    bindings = <&bootloader>;
+                    layers = <1>;
+                };
     };
 };
 
