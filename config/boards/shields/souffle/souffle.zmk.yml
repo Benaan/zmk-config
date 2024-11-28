@@ -1,0 +1,12 @@
+file_format: "1"
+id: souffle
+name: Souffle
+type: shield
+url: https://github.com/josefadamcik/SofleKeyboard
+requires: [pro_micro]
+features:
+  - keys
+  - studio
+siblings:
+  - sofle_left
+  - sofle_right
