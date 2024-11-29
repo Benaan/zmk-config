@@ -107,7 +107,7 @@
             bindings = <&kp PRCNT>;
             layers = <COMBO_LAYER>;
         };
-        combo_b4 {
+        combo_b4 {v
             timeout-ms = <TIMEOUT>;
             key-positions = <37 40>;
             bindings = <&kp COLON>;
@@ -123,6 +123,19 @@
             timeout-ms = <TIMEOUT>;
             key-positions = <37 39>;
             bindings = <&kp TILDE>;
+            layers = <COMBO_LAYER>;
+        };
+
+        combo_gui {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <29 41>;
+            bindings = <&kp LGUI>;
+            layers = <COMBO_LAYER>;
+        };
+        combo_alt {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <17 29>;
+            bindings = <&kp LALT>;
             layers = <COMBO_LAYER>;
         };
 
