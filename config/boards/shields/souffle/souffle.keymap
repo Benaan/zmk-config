@@ -6,11 +6,6 @@
 #define TIMEOUT 30
 #define COMBO_LAYER 0 1
 
-
-
-BSLH
-
-
 / {
     combos {
         compatible = "zmk,combos";
