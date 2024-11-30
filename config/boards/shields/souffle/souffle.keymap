@@ -162,26 +162,6 @@
             bindings = <&kp MINUS>;
             layers = <COMBO_LAYER>;
         };
-        combo_b8 {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <40 41>;
-            bindings = <&mo 2>;
-            layers = <COMBO_LAYER>;
-        };
-
-        combo_gui {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <29 41>;
-            bindings = <&kp LGUI>;
-            layers = <COMBO_LAYER>;
-        };
-        combo_alt {
-            timeout-ms = <TIMEOUT>;
-            key-positions = <17 29>;
-            bindings = <&kp LALT>;
-            layers = <COMBO_LAYER>;
-        };
-
     };
 };
 
@@ -207,7 +187,7 @@
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS       &none
                 &kp HYPER       &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O          &kp HYPER
                 &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &kp LSHFT           &kp LALT    &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH       &none
-                &kp LCTRL                                       &none           &none           &kp SPACE       &mo 1               &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
+                &kp LGUI                                        &none           &kp LALT        &kp SPACE       &kp LCTRL           &mo 1       &kp LSHFT       &none           &none                                          &kp LGUI
 			>;
 		};  
         layer_1 {
@@ -219,16 +199,7 @@
                 &trans                                          &trans          &trans          &trans          &trans              &trans      &trans          &trans          &trans                                          &trans
 		    >;         
 		};
-        layer_2 {
-            bindings = <
-                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
-                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &kp N7          &kp N8          &kp N9          &trans          &none
-                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &kp N4          &kp N5		    &kp N6          &kp N0          &none
-                &trans          &trans          &trans          &trans          &trans          &trans          &trans              &trans      &trans          &kp N1          &kp N2          &kp N3       	&trans          &none
-                &trans                                          &trans          &trans          &trans          &trans              &trans      &trans          &trans          &trans                                          &none
-            >;
-        };
-};
+    };
 };
 
 //              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none       
