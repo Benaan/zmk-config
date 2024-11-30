@@ -54,15 +54,15 @@
         combo_h7 {
             timeout-ms = <TIMEOUT>;
             key-positions = <28 29>;
+            bindings = <&mo 1>;
+            layers = <COMBO_LAYER>;
+        };
+        combo_h8 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <27 29>;
             bindings = <&kp DEL>;
             layers = <COMBO_LAYER>;
         };
-//        combo_h8 {
-//            timeout-ms = <TIMEOUT>;
-//            key-positions = <27 29>;
-//            bindings = <&kp >;
-//            layers = <COMBO_LAYER>;
-//        };
         combo_h9 {
             timeout-ms = <TIMEOUT>;
             key-positions = <26 29>;
@@ -162,7 +162,12 @@
             bindings = <&kp MINUS>;
             layers = <COMBO_LAYER>;
         };
-
+        combo_b8 {
+            timeout-ms = <TIMEOUT>;
+            key-positions = <40 41>;
+            bindings = <&mo 2>;
+            layers = <COMBO_LAYER>;
+        };
 
         combo_gui {
             timeout-ms = <TIMEOUT>;
@@ -207,15 +212,23 @@
 		};  
         layer_1 {
 			bindings = <
-                &trans          &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                                          &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &trans
-                &trans          &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &kp F11                                         &kp F12         &kp INS         &trans          &trans          &trans          &trans
-                &trans          &trans          &trans		    &trans          &trans          &fnArrow                                        &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans
-                &trans          &kp SEMI        &kp LBRC        &kp RBRC        &kp DEL         &kp UNDER       &trans              &trans      &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &trans      
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &kp PSCRN       &kp INS         &trans          &trans          &kp CAPS        &trans      
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &kp C_NEXT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &trans      
+                &trans          &trans          &trans          &trans          &trans          &trans          &trans              &trans      &kp C_PP        &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &trans      
                 &trans                                          &trans          &trans          &trans          &trans              &trans      &trans          &trans          &trans                                          &trans
-
 		    >;         
 		};
-	};
+        layer_2 {
+            bindings = <
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &trans          &trans          &trans          &trans          &none
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &kp N7          &kp N8          &kp N9          &trans          &none
+                &trans          &trans          &trans          &trans          &trans          &trans                                          &trans          &kp N4          &kp N5		    &kp N6          &kp N0          &none
+                &trans          &trans          &trans          &trans          &trans          &trans          &trans              &trans      &trans          &kp N1          &kp N2          &kp N3       	&trans          &none
+                &trans                                          &trans          &trans          &trans          &trans              &trans      &trans          &trans          &trans                                          &none
+            >;
+        };
+};
 };
 
 //              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none       
