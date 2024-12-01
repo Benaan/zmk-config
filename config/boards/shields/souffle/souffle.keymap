@@ -3,7 +3,7 @@
 
 #define HYPER LS(LC(LA(LGUI)))
 
-#define TIMEOUT 30
+#define TIMEOUT 20
 #define TIMEOUT_HOMEROW 10
 #define COMBO_LAYER 0 1
 
