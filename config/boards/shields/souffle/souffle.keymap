@@ -87,7 +87,7 @@
                 &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &kp U           &kp Y           &kp APOS        &none
                 &none           &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp N           &kp E           &kp I           &kp O           &none
-                &none           &hml LALT Z     &hml LGUI X     &hml LCTRL C    &hml LSHFT D    &kp V           &mo UTIL            &mo LSYMBOL &kp K           &hmr LSHFT H    &hmr LCTRL COMMA &hmr LGUI DOT  &hmr LALT QMARK &none
+                &none           &hml LALT Z     &hml LGUI X     &hml LCTRL C    &hml LSHFT D    &kp V           &mo UTIL            &mo 4       &kp K           &hmr LSHFT H    &hmr LCTRL COMMA &hmr LGUI DOT  &hmr LALT QMARK &none
                 &none                                           &none           &none           &kp SPACE       &kp LCTRL           &mo UTIL    &kp LSHFT       &none           &none                                           &none
 			>;
 		};
@@ -97,7 +97,7 @@
                 &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp ESC         &kp ENTER       &kp UP          &kp Y           &kp APOS        &none
                 &none           &kp A           &kp R           &kp S           &kp T           &kp G                                           &kp M           &kp LEFT        &kp DOWN        &kp RIGHT       &kp O           &none
-                &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &mo UTIL            &mo LSYMBOL &kp K           &hmr LSHFT H    &hmr LCTRL COMMA &hmr LGUI DOT  &hmr LALT QMARK &none
+                &none           &kp Z           &kp X           &kp C           &kp D           &kp V           &mo UTIL            &mo 4       &kp K           &hmr LSHFT H    &hmr LCTRL COMMA &hmr LGUI DOT  &hmr LALT QMARK &none
                 &none                                           &none           &none           &kp LSHFT       &kp LCTRL           &mo UTIL    &kp LSHFT       &none           &none                                           &none
 			>;
 		};
@@ -122,7 +122,7 @@
 		    >;
 		};
 
-        layer_symbol {
+        layer_4 {
             bindings = <
                 &none           &kp TILDE       &kp CARET       &kp HASH        &kp DLLR        &kp PRCNT                                       &studio_unlock  &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
                 &none           &arrow          &kp BSLH        &kp FSLH        &kp EXCL        &fnArrow                                        &none           &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
