@@ -106,7 +106,7 @@
             >;
         };
 
-	    layer_3 {
+	layer_3 {
 			bindings = <
                 &none           &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                                          &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
                 &none           &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp ESC         &kp ENTER       &kp UP          &kp Y           &kp APOS        &none
@@ -116,6 +116,14 @@
 			>;
 		};
 	};
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
+        };
 };
 
 //              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
