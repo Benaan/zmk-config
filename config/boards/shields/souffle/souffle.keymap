@@ -98,7 +98,7 @@
 
         layer_2 {
             bindings = <
-                &none           &kp TILDE       &kp CARET       &kp HASH        &kp DLLR        &kp PRCNT                                       &none           &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
+                &none           &kp TILDE       &kp CARET       &kp HASH        &kp DLLR        &kp PRCNT                                       &studio_unlock  &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
                 &none           &arrow          &kp BSLH        &kp FSLH        &kp EXCL        &fnArrow                                        &none           &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
                 &none           &kp SEMI        &kp COLON       &kp MINUS       &kp EQUAL       &kp PIPE                                        &none           &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
                 &none           &kp ASTRK       &kp AT          &kp PLUS        &kp AMPS        &kp UNDER       &trans               &none      &none           &kp LSHFT       &kp LCTRL       &kp LGUI        &kp LALT        &none
