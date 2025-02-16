@@ -23,7 +23,7 @@
             timeout-ms = <30>;
             key-positions = <6 9>;
             bindings = <&bootloader>;
-            layers = <1>;
+            layers = <UTIL>;
         };
 
        combo_game1 {
