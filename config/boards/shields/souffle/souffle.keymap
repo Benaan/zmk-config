@@ -118,11 +118,25 @@
 	};
 
         extra1 {
-            status = "reserved";
+            bindings = <
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none           &none               &none       &none           &none           &none           &none           &none           &none
+              &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none
+
+            >;
         };
 
         extra2 {
-            status = "reserved";
+            bindings = <
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none                                           &none           &none           &none           &none           &none           &none
+              &none           &none           &none           &none           &none           &none           &none               &none       &none           &none           &none           &none           &none           &none
+              &none                                           &none           &none           &none           &none               &none       &none           &none           &none                                           &none
+
+            >;
         };
 };
 
